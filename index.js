@@ -48,4 +48,19 @@ const stopButtonElement = document.querySelector(".stop-button");
 stopButtonElement.addEventListener('click', () => {
     pomodoro.stop();
 });
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
  
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+
