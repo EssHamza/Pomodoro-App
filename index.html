@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&family=Lora&family=Merriweather&family=Montserrat&family=Orbitron:wght@400;800&family=Outfit:wght@400;700&family=Playpen+Sans:wght@500&family=Poppins:wght@400;500;700&family=Roboto+Mono:wght@500&family=Rubik&family=Work+Sans&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <h1>Pomodoro Timer</h1>
+    </header>
+    <main>
+        <div class="container">
+            <ul>
+                <li class="active">
+                    <a href="#">Pomodoro</a>
+                </li>
+                <li>
+                    <a href="#">Short Break</a>
+                </li>
+                <li>
+                    <a href="#">Long Break</a>
+                </li>
+            </ul>
+        </div>
+        <div class="circle">
+            <div class="pad">
+                <div class="time">
+                    <span id="minDec" class="number">2</span>
+                    <span id="minUni" class="number">5</span>
+                    <span>:</span>
+                    <span id="secDec" class="number">0</span>
+                    <span id="secUni" class="number">0</span>
+                </div>
+                <button class="start-button" onclick="pomodoro.start()">Start</button>
+            </div>
+        </div>
+    </main>
+    <script src="index.js"></script>
+</body>
+</html>
