@@ -2,21 +2,19 @@ const minDecElement = document.getElementById("minDec");
 const minUniElement = document.getElementById("minUni");
 const secDecElement = document.getElementById("secDec");
 const secUniElement = document.getElementById("secUni");
-const startButtonElement = document.querySelector(".start-button"); 
-const numberElements = document.querySelectorAll(".number");
+const startButtonElement = document.querySelector(".start-button");
 
 class Pomodoro {
-
-    constructor(){
-        this.currentTime = 1500; 
+    constructor() {
+        this.currentTime = 1500;
         this.intervalId = null;
     }
 
-    start(){
+    start() {
         this.intervalId = setInterval(() => {
-            this.currentTime -= 1;
+            this.currentTime--;
             if (this.currentTime < 0) {
-                this.stop(); 
+                this.stop();
                 return;
             }
             this.updateDisplay();
@@ -25,6 +23,16 @@ class Pomodoro {
 
     stop() {
         clearInterval(this.intervalId);
+    }
+
+    resetPomodoro() {
+        this.currentTime = 1500;
+        this.updateDisplay();
+    }
+
+    resetShortBreak() {
+        this.currentTime = 300; 
+        this.updateDisplay();
     }
 
     updateDisplay() {
@@ -37,17 +45,25 @@ class Pomodoro {
 
 const pomodoro = new Pomodoro();
 
-startButtonElement.addEventListener('click', () => {
-    pomodoro.start();
-    startButtonElement.className = "stop-button";
-    
-});
+function toggleTimer() {
+    if (startButtonElement.classList.contains("start-button")) {
+        pomodoro.start();
+        startButtonElement.className = "stop-button";
+        startButtonElement.innerHTML = "STOP";
+    } else {
+        pomodoro.stop();
+        startButtonElement.className = "start-button";
+        startButtonElement.innerHTML = "START";
+    }
+
+    localStorage.setItem('pomodoroState', pomodoro.currentTime);
+}
 
 
-const stopButtonElement = document.querySelector(".stop-button");
-stopButtonElement.addEventListener('click', () => {
-    pomodoro.stop();
-});
+
+if (window.location.href.includes('shortBreak.html')) {
+    pomodoro.resetShortBreak();
+}
 
 
 //secUniElement.textContent = (this.currentTime % 10).toString();
@@ -64,3 +80,210 @@ stopButtonElement.addEventListener('click', () => {
 
 
 
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+
+
+
+
+
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+ 
+
+
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
