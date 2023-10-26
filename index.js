@@ -1,3 +1,4 @@
+
 const minDecElement = document.getElementById("minDec");
 const minUniElement = document.getElementById("minUni");
 const secDecElement = document.getElementById("secDec");
@@ -180,6 +181,10 @@ if (window.location.href.includes('shortBreak.html')) {
 
 
 
+//secUniElement.textContent = (this.currentTime % 10).toString();
+//secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
+//minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
+//minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
 
 
 
@@ -287,3 +292,5 @@ if (window.location.href.includes('shortBreak.html')) {
 //secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
 //minUniElement.textContent = Math.floor((this.currentTime / 60) % 10).toString();
 //minDecElement.textContent = Math.floor((this.currentTime / 600) % 10).toString();
+
+
