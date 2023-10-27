@@ -65,7 +65,9 @@ function toggleTimer() {
 }
 
 
-
+if (window.location.href.includes('index.html')) {
+    pomodoro.resetPomodoro();
+}
 if (window.location.href.includes('shortBreak.html')) {
     pomodoro.resetShortBreak();
 }
