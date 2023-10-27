@@ -35,6 +35,10 @@ class Pomodoro {
         this.currentTime = 300; 
         this.updateDisplay();
     }
+    resetLongBreak(){
+        this.currentTime=900;
+        this.updateDisplay
+    }
 
     updateDisplay() {
         secUniElement.textContent = (this.currentTime % 10).toString();
@@ -64,6 +68,9 @@ function toggleTimer() {
 
 if (window.location.href.includes('shortBreak.html')) {
     pomodoro.resetShortBreak();
+}
+if (window.location.href.includes('LongBreak.html')) {
+    pomodoro.resetLongBreak();
 }
 
 
