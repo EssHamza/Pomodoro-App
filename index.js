@@ -75,6 +75,9 @@ if (window.location.href.includes('LongBreak.html')) {
     pomodoro.resetLongBreak();
 }
 
+//next functionnality will be the to do list and calendar integration maybe ill use an api 
+//another thing is the design needs to be better
+
 
 //secUniElement.textContent = (this.currentTime % 10).toString();
 //secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
