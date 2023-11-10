@@ -78,10 +78,18 @@ ul li:hover {
     letter-spacing: 3px;
     cursor: pointer;
 }
-button:hover {
+.start-button:hover {
     background-color: rgb(224, 209, 209);
     color: tomato;
   }
 
 
 
+
+.todo-btn{
+    padding: 20px 50px ;
+    border: 4px solid  tomato;
+    border-radius: 40px;
+    background-color:  #54856e;
+    color: white;
+}

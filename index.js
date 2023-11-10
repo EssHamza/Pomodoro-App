@@ -4,7 +4,7 @@ const minUniElement = document.getElementById("minUni");
 const secDecElement = document.getElementById("secDec");
 const secUniElement = document.getElementById("secUni");
 const startButtonElement = document.querySelector(".start-button");
-
+const todo = document.querySelector(".todo");
 class Pomodoro {
     constructor() {
         this.currentTime = 1500;
@@ -74,7 +74,7 @@ if (window.location.href.includes('shortBreak.html')) {
 if (window.location.href.includes('LongBreak.html')) {
     pomodoro.resetLongBreak();
 }
-
+todo.onlick
 //next functionnality will be the to do list and calendar integration maybe ill use an api 
 //another thing is the design needs to be better
 
