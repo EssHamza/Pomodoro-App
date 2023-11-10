@@ -4,7 +4,7 @@ const minUniElement = document.getElementById("minUni");
 const secDecElement = document.getElementById("secDec");
 const secUniElement = document.getElementById("secUni");
 const startButtonElement = document.querySelector(".start-button");
-const todo = document.querySelector(".todo");
+const todo = document.querySelector(".todo-btn");
 class Pomodoro {
     constructor() {
         this.currentTime = 1500;
@@ -74,7 +74,26 @@ if (window.location.href.includes('shortBreak.html')) {
 if (window.location.href.includes('LongBreak.html')) {
     pomodoro.resetLongBreak();
 }
-todo.onlick
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    let inputbox = document.querySelector('#inputbox');
+    let List = document.querySelector('#List');
+    
+    inputbox.addEventListener("keyup", function (event) {
+        if (event.key == "Enter") {
+            addItem(this.value);
+           
+        }
+    });
+
+    let addItem = (inputbox) => {
+        let listItem = document.createElement("li");
+        listItem.innerHTML = `${inputbox}`;
+        List.appendChild(listItem);
+    }
+});
+
 //next functionnality will be the to do list and calendar integration maybe ill use an api 
 //another thing is the design needs to be better
 
