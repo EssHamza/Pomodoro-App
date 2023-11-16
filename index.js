@@ -36,7 +36,7 @@ class Pomodoro {
         this.updateDisplay();
     }
     resetLongBreak(){
-        this.currentTime=900;
+        this.currentTime = 900;
         this.updateDisplay
     }
 
@@ -93,6 +93,20 @@ document.addEventListener('DOMContentLoaded', function () {
         List.appendChild(listItem);
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //next functionnality will be the to do list and calendar integration maybe ill use an api 
 //another thing is the design needs to be better

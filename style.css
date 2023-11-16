@@ -4,7 +4,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: rgb(37, 43, 59);
-    font-family: 'Rubik', sans-serif;
+    font-family: 'Inter', sans-serif;
     
     
 }
@@ -93,3 +93,29 @@ ul li:hover {
     background-color:  #54856e;
     color: white;
 }
+.container{
+    color:white;
+
+}
+input {
+    padding: 20px 10px 20px 10px ;
+    border: 2px solid tomato;
+    border-radius: 25px;
+    background-color: tomato;
+
+
+}
+.form{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    background-color: red;
+    transform: translateX(-50%);
+  }
+  .form:hover{
+    transform: translateY(10%);
+    background-color: tomato;
+    border-radius: 50px;
+    width: 100px;
+    height: 100px;
+  }
