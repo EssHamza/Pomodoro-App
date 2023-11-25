@@ -81,6 +81,7 @@ ul li:hover {
 .start-button:hover {
     background-color: rgb(224, 209, 209);
     color: tomato;
+    
   }
 
 
@@ -118,4 +119,8 @@ input {
     border-radius: 50px;
     width: 100px;
     height: 100px;
+  }
+  .time:hover{
+      cursor: pointer;
+
   }
