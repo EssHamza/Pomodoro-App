@@ -124,3 +124,8 @@ input {
       cursor: pointer;
 
   }
+  button{
+      padding: 10px 15px;
+      border: 1px solid white;
+      border-radius: 20px;
+  }

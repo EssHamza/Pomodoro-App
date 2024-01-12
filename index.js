@@ -89,9 +89,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let addItem = (inputbox) => {
         let listItem = document.createElement("li");
-        listItem.innerHTML = `${inputbox}`;
+        listItem.innerHTML = `${inputbox} <button>Del</button>`;
         List.appendChild(listItem);
     }
+
+    
 });
 
 
