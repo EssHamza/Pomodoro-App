@@ -89,11 +89,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
     let addItem = (inputbox) => {
         let listItem = document.createElement("li");
-        listItem.innerHTML = `${inputbox} <button>Del</button>`;
+        listItem.innerHTML = `${inputbox} <button class="delete"> Del </button>`;
         List.appendChild(listItem);
     }
 
-    
+    var current_task = document.querySelectorAll(".delete");
+         for(var i = 0 ; i < current_task.length ; i++){
+             current_task[i].onclick = function(){
+                 this.removeChild();
+             }
+         }
 });
 
 
@@ -112,7 +117,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //next functionnality will be the to do list and calendar integration maybe ill use an api 
 //another thing is the design needs to be better
-
+//yes
 
 //secUniElement.textContent = (this.currentTime % 10).toString();
 //secDecElement.textContent = Math.floor((this.currentTime / 10) % 6).toString();
